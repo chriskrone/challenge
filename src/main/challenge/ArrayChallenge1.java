@@ -27,6 +27,7 @@ public class ArrayChallenge1 {
 		int sum = 0;
 		
 		//this for loop is identical to (but simpler than) "for(int i = 0 ; i < numbers.length ; i++){"
+		//except it automatically assigns numbers[i] to a variable called num
 		for (int num : numbers){
 			//add the number to the sum
 			
