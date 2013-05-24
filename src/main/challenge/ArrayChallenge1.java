@@ -16,8 +16,26 @@ public class ArrayChallenge1 {
 	 * @throws Exception if for some reason we can't sum the array provided
 	 */
 	public static int findSum(int[] numbers) throws Exception{
-		//TODO - write some code here, homey!
-		return -1;
+		//here we are handling error conditions
+		
+		if (numbers == null || numbers.length == 0){
+			//we have nothing to do if the array is null or there are no numbers in the array
+			//so throw an exception to yell at the user!
+			throw new Exception("Bad input, bro!");
+		}
+		//initialize our "sum" variable
+		int sum = 0;
+		
+		//this for loop is identical to (but simpler than) "for(int i = 0 ; i < numbers.length ; i++){"
+		for (int num : numbers){
+			//add the number to the sum
+			
+			//this is identical to (but simpler than) "sum = sum + num;"
+			sum += num;
+		}
+		
+		//return the results!
+		return sum;
 	}
 	
 	/**
