@@ -1,4 +1,3 @@
-package challenge;
 
 /**
  * This class was designed to help test your skills manipulating arrays. I've created method skeletons for you.
@@ -46,9 +45,25 @@ public class ArrayChallenge1 {
 	 * @throws Exception if for some reason we can't find the average of the array provided
 	 */
 	public static double findAverage(int[] numbers) throws Exception{
-		//TODO - write some code here, homey!
-		//hint: you're probably going to have to cast some ints as doubles!
-		return -1;
+		//here we are handling error conditions
+
+		if (numbers == null || numbers.length == 0){
+			//we have nothing to do if the array is null or there are no numbers in the array
+			//so throw an exception to yell at the user!
+			throw new Exception("Bad input, bro!");
+		}
+		//initialize "sum" variable
+		double sum = 0;
+		double average = 0;
+		
+		for (double num : numbers){
+			//add the number to the sum
+			sum += num;
+		}
+		
+		average = (sum / numbers.length);
+		//return the results!
+		return (double) average;
 	}
 	
 	/**
@@ -59,8 +74,28 @@ public class ArrayChallenge1 {
 	 */
 	public static int[] reverseArray(int[] numbers) throws Exception{
 		//TODO - write some code here, homey!
-		return null;
+		if (numbers == null || numbers.length == 0){
+			//we have nothing to do if the array is null or there are no numbers in the array
+			//so throw an exception to yell at the user!
+			throw new Exception("Bad input, bro!");
+		}
+		
+       
+      
+	   int length = numbers.length;
+			   
+       for (int i = 0; i < length / 2; i++) {
+          
+           int placeHolder = numbers[length - (1 + i)];
+          
+           numbers[length - (1 + i)] = numbers[i];
+           
+           numbers[i] = placeHolder;
 	}
+		
+		return numbers;
+	}
+
 	
 	/**
 	 * Changes all of the elements in an array to whatever the biggest one is
@@ -71,7 +106,33 @@ public class ArrayChallenge1 {
 	public static int[] changeAllToBiggest(int[] numbers) throws Exception{
 		//TODO - write some code here, homey!
 		//hint: Math.max(num1, num2) will return the bigger of the two numbers!
-		return null;
+		
+		if (numbers == null || numbers.length == 0){
+			
+			throw new Exception("Bad input, bro!");
+		}
+		
+		
+		double getToTheBiggestNumbah = Double.POSITIVE_INFINITY * -1;
+		
+		for (int num : numbers){
+			
+			if (num > getToTheBiggestNumbah){
+				getToTheBiggestNumbah = num;
+			}
+		
+		
+		}
+		for (int i = 0; i < numbers.length; i++){
+			numbers [i] = (int) getToTheBiggestNumbah;
+			
+			}
+		
+		
+		return numbers;
 	}
 
 }
+
+
+
