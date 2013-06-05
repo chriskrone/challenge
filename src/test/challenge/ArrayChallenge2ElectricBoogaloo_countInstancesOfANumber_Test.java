@@ -9,7 +9,7 @@ import static challenge.ArrayChallenge2ElectricBoogaloo.*;
 public class ArrayChallenge2ElectricBoogaloo_countInstancesOfANumber_Test {
 	
 	@Test
-	public void findBiggestDifference_testWorksWithOneCount() throws Exception{
+	public void countInstancesOfANumber_testWorksWithOneCount() throws Exception{
 		int[] input1 = new int[]{1,2,5};
 		int input2 = 5;
 		int expected = 1;
@@ -19,7 +19,7 @@ public class ArrayChallenge2ElectricBoogaloo_countInstancesOfANumber_Test {
 	}
 	
 	@Test
-	public void findBiggestDifference_testWorksWithMultipleCount() throws Exception{
+	public void countInstancesOfANumber_testWorksWithMultipleCount() throws Exception{
 		int[] input1 = new int[]{1,2,5,2,3,4,2};
 		int input2 = 2;
 		int expected = 3;
@@ -29,7 +29,7 @@ public class ArrayChallenge2ElectricBoogaloo_countInstancesOfANumber_Test {
 	}
 	
 	@Test
-	public void findBiggestDifference_testWorksWithZeroCount() throws Exception{
+	public void countInstancesOfANumber_testWorksWithZeroCount() throws Exception{
 		int[] input1 = new int[]{1,2,5,2,3,4,2};
 		int input2 = 50;
 		int expected = 0;
@@ -39,13 +39,13 @@ public class ArrayChallenge2ElectricBoogaloo_countInstancesOfANumber_Test {
 	}
 	
 	@Test(expected = Exception.class)
-	public void findBiggestDifference_testWorksWithZero() throws Exception{
+	public void countInstancesOfANumber_testWorksWithZero() throws Exception{
 		int[] input1 = new int[0];
 		countInstancesOfANumber(input1, 1);
 	}
 	
 	@Test(expected = Exception.class)
-	public void findBiggestDifference_testWorksWithNull() throws Exception{
+	public void countInstancesOfANumber_testWorksWithNull() throws Exception{
 		int[] input = null;
 		countInstancesOfANumber(input, 1);
 	}
